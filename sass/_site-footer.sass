@@ -1,0 +1,99 @@
+@use "variables" as *
+@use "mixins" as *
+
+.footer-social
+  +flex-center
+  height: 95px
+  background-color: #eeeeee
+
+.footer-social-list
+  +flex-center
+  gap: 6px
+  list-style: none
+
+.footer-social-link
+  +flex-center
+  width: 47px
+  height: 47px
+  border-radius: 50%
+  background-color: #b9b9b9
+  color: white
+  transition: background-color $fade
+  &:hover
+    background-color: $red-dark
+
+.footer-social-icon
+  width: 24px
+  height: 24px
+
+.footer-red
+  height: 25px
+  background-color: $red-dark
+
+.footer-main
+  padding: 27px 0 40px
+  background-color: #252525
+
+.footer-cols
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  width: 660px
+  margin: 0 auto
+  list-style: none
+
+.footer-col
+  width: 150px
+
+.footer-icon
+  +flex-center
+  height: 77px
+  margin-bottom: 29px
+
+.footer-icon-svg
+  width: 96px
+  height: 77px
+  fill: none
+  stroke: #d0d0d0
+  stroke-width: 1.5
+  stroke-linecap: round
+  stroke-linejoin: round
+
+.col-title
+  height: 47px
+  box-sizing: border-box
+  border-top: 1px solid #5c5c5c
+  border-bottom: 1px solid #5c5c5c
+  font-size: 14px
+  font-weight: normal
+  line-height: 45px
+  text-align: center
+  color: white
+
+.col-links
+  margin-top: 22px
+  list-style: none
+
+.col-item
+  font-size: 12px
+  line-height: 28px
+
+.col-link
+  color: #a5a5a5
+  text-decoration: none
+  transition: color $fade
+  &:hover
+    color: white
+
+.copyright
+  margin-top: 66px
+  text-align: center
+
+.copyright-text
+  font-size: 13px
+  line-height: 18px
+  color: #999999
+
+.copyright-design
+  font-size: 12px
+  color: #777777

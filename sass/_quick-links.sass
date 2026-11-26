@@ -1,0 +1,30 @@
+@use "variables" as *
+
+.quick-links
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  width: 800px
+  margin: 194px auto 141px
+  list-style: none
+
+.quick-item
+  width: 185px
+  padding-bottom: 17px
+  border-bottom: 1px solid #dbdbdb
+  text-align: center
+
+.quick-link
+  display: block
+  font-size: 15px
+  line-height: 30px
+  color: $gray-btn
+  text-decoration: none
+  transition: color $fade
+  &:hover
+    color: $red
+
+.links-divider
+  height: 2px
+  margin: 0 10px
+  background-color: $line

@@ -1,0 +1,99 @@
+@use "variables" as *
+@use "mixins" as *
+
+.site-header
+  position: sticky
+  top: 0
+  z-index: 10
+  height: 110px
+  background-color: #272727
+
+.header-bar
+  display: flex
+  align-items: center
+  height: 100%
+  padding-right: 286px
+  box-sizing: border-box
+
+.site-logo-img
+  display: block
+  width: 145px
+
+.site-nav
+  margin-right: 48px
+
+.nav-list
+  display: flex
+  align-items: center
+  list-style: none
+
+.nav-item
+  +flex-center
+  position: relative
+  height: 30px
+  padding: 0 21px
+  box-sizing: border-box
+  & + &
+    border-right: 1px solid $nav-line
+  &:hover .nav-link, &.is-active .nav-link
+    color: white
+  // زیرمنو با هاور یا فوکوس باز می‌شود
+  &:hover .dropdown, &:focus-within .dropdown
+    opacity: 1
+    visibility: visible
+    transform: translateY(0)
+
+.nav-link
+  color: $nav-text
+  font-size: 14px
+  text-decoration: none
+  white-space: nowrap
+
+.nav-lang .nav-link
+  font-size: 16px
+
+// منوهایی که زیرمنو دارند: فلش کوچک کنار متن
+.has-dropdown
+  .nav-link
+    display: flex
+    align-items: center
+    gap: 9px
+    &::after
+      content: ""
+      border-left: 5px solid transparent
+      border-right: 5px solid transparent
+      border-top: 6px solid $nav-text
+  &:hover .nav-link::after
+    border-top-color: white
+
+.dropdown
+  position: absolute
+  top: 100%
+  right: 0
+  z-index: 20
+  width: 193px
+  background-color: #2d2d2d
+  opacity: 0
+  visibility: hidden
+  transform: translateY(10px)
+  transition: opacity 250ms, transform 250ms, visibility 250ms
+
+.dropdown-list
+  list-style: none
+
+.dropdown-item
+  height: 46px
+
+.dropdown-link
+  display: flex
+  align-items: center
+  width: 100%
+  height: 100%
+  padding: 0 27px 0 10px
+  box-sizing: border-box
+  color: $nav-text
+  font-size: 14px
+  text-decoration: none
+  white-space: nowrap
+  &:hover
+    color: white

@@ -1,0 +1,56 @@
+@use "variables" as *
+
+.product-banner
+  position: relative
+  padding-bottom: 20px
+  box-sizing: border-box
+  background-color: $gold
+
+.product-img
+  display: block
+  width: 100%
+  height: 490px
+  object-fit: cover
+
+.product-label
+  position: absolute
+  bottom: 0
+  right: 442px
+  width: 290px
+  height: 97px
+  padding: 14px 37px 0 0
+  box-sizing: border-box
+  background-color: $red-dark
+  color: white
+
+.product-label-title
+  margin-bottom: 8px
+  font-size: 28px
+  font-weight: normal
+  line-height: 40px
+
+.product-label-subtitle
+  font-size: 15px
+  font-weight: normal
+  line-height: 24px
+
+.product-line
+  height: 1px
+  margin: 37px 10px 0
+  background-color: $line
+
+.product-info
+  width: 660px
+  margin: 0 auto
+  padding: 50px 0 80px
+  .block-text + .block-text
+    margin-top: 50px
+
+.product-buttons
+  display: flex
+  align-items: center
+  gap: 6px
+  margin-top: 40px
+
+.product-btn
+  padding: 0 25px

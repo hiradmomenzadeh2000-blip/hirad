@@ -1,0 +1,33 @@
+@use "mixins" as *
+
+// دکمه‌ی برگشت به بالا: با اسکرول ظاهر می‌شود
+.to-top
+  +flex-center
+  position: fixed
+  left: 20px
+  bottom: 20px
+  z-index: 50
+  width: 40px
+  height: 40px
+  border-radius: 2px
+  background-color: #8c8c8c
+  opacity: 0
+  visibility: hidden
+  animation: to-top-show linear both
+  animation-timeline: scroll(root)
+  animation-range: 0px 300px
+  &::after
+    content: ""
+    border-left: 6px solid transparent
+    border-right: 6px solid transparent
+    border-bottom: 7px solid white
+  &:hover
+    background-color: #6f6f6f
+
+@keyframes to-top-show
+  from
+    opacity: 0
+    visibility: hidden
+  to
+    opacity: 1
+    visibility: visible

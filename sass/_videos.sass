@@ -1,0 +1,63 @@
+@use "variables" as *
+@use "mixins" as *
+
+.videos
+  padding: 61px 0
+  box-sizing: border-box
+  background-color: white
+
+.videos-grid
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  gap: 12px
+  width: 980px
+  margin: 0 auto
+
+.video-card
+  +flex-column
+  border: 1px solid #e5e5e5
+  box-sizing: border-box
+  background-color: white
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1)
+
+.video-box
+  +flex-center
+  height: 180px
+  border-bottom: 1px solid #e5e5e5
+  background-color: white
+
+.play
+  +flex-center
+  width: 80px
+  height: 80px
+  border-radius: 50%
+  background-color: #8c8c8c
+  transition: background-color $fade
+  &::after
+    content: ""
+    margin-left: 8px
+    border-top: 13px solid transparent
+    border-bottom: 13px solid transparent
+    border-left: 22px solid white
+  &:hover
+    background-color: $red-dark
+
+.video-body
+  +flex-column
+  flex: 1
+  padding: 24px 20px 21px
+  box-sizing: border-box
+
+.video-title
+  margin-bottom: 26px
+  font-size: 16px
+  font-weight: bold
+  line-height: 24px
+  color: $red
+
+.video-text
+  margin-bottom: 23px
+  font-size: 13px
+  line-height: 27px
+  text-align: justify
+  color: $gray

@@ -1,0 +1,74 @@
+@use "variables" as *
+
+.hero
+  height: 457px
+  background: linear-gradient(to bottom left, #fbfafb 0%, #d2d2d2 100%)
+  overflow: hidden
+
+.hero-content
+  display: flex
+  align-items: center
+  height: 100%
+  padding-right: 310px
+  box-sizing: border-box
+
+.hero-text
+  width: 405px
+  animation: hero-text-in 900ms ease-out both
+
+.hero-title
+  margin-bottom: 13px
+  font-size: 28px
+  font-weight: normal
+  line-height: 44px
+  color: $red
+  white-space: nowrap
+
+.hero-subtitle
+  margin-bottom: 15px
+  font-size: 20px
+  font-weight: normal
+  line-height: 30px
+  color: #58595b
+
+.hero-desc
+  margin-bottom: 23px
+  font-size: 15px
+  line-height: 33px
+  color: $gray
+
+.hero-image
+  margin-right: 130px
+  animation: hero-image-in 1000ms ease-out both
+
+.hero-img
+  display: block
+  width: 245px
+  animation: hero-float 4s ease-in-out 1s infinite
+
+.hero-divider
+  height: 1px
+  margin: 16px 10px 0
+  background-color: #bababa
+
+@keyframes hero-text-in
+  from
+    opacity: 0
+    transform: translateX(60px)
+  to
+    opacity: 1
+    transform: translateX(0)
+
+@keyframes hero-image-in
+  from
+    opacity: 0
+    transform: translateX(-60px)
+  to
+    opacity: 1
+    transform: translateX(0)
+
+@keyframes hero-float
+  0%, 100%
+    transform: translateY(0)
+  50%
+    transform: translateY(-12px)
